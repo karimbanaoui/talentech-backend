@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tjm_data",
+  "info": {
+    "singularName": "tjm",
+    "pluralName": "tjm-data",
+    "displayName": "TJMData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "byExpertise": {
+      "type": "json",
+      "required": true
+    },
+    "byDomain": {
+      "type": "json",
+      "required": true
+    },
+    "byDuration": {
+      "type": "json",
+      "required": true
+    },
+    "evolution": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

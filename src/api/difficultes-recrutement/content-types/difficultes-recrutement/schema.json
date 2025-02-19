@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "difficultes_recrutements",
+  "info": {
+    "singularName": "difficultes-recrutement",
+    "pluralName": "difficultes-recrutements",
+    "displayName": "difficultes-recrutement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "domaine": {
+      "type": "string",
+      "required": true
+    },
+    "tres_difficile": {
+      "type": "integer",
+      "required": true
+    },
+    "Difficile": {
+      "type": "integer",
+      "required": true
+    },
+    "Correct": {
+      "type": "integer",
+      "required": true
+    },
+    "Facile": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

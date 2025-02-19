@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "freelance_data",
+  "info": {
+    "singularName": "freelance",
+    "pluralName": "freelance-data",
+    "displayName": "freelance-data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sizeEvolution": {
+      "type": "json",
+      "required": true
+    },
+    "activityRates": {
+      "type": "json",
+      "required": true
+    },
+    "sizeRates": {
+      "type": "json",
+      "required": true
+    },
+    "experienceDistribution": {
+      "type": "json",
+      "required": true
+    },
+    "workConditions": {
+      "type": "json",
+      "required": true
+    },
+    "recruitmentDifficulty": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

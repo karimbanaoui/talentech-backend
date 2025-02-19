@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evolutions",
+  "info": {
+    "singularName": "evolution",
+    "pluralName": "evolutions",
+    "displayName": "Evolutions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    },
+    "analysis": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

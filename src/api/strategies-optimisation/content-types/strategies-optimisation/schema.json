@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strategies_optimisations",
+  "info": {
+    "singularName": "strategies-optimisation",
+    "pluralName": "strategies-optimisations",
+    "displayName": "strategies-optimisation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

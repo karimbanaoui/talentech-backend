@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "raisons_freelances",
+  "info": {
+    "singularName": "raisons-freelance",
+    "pluralName": "raisons-freelances",
+    "displayName": "raisons-freelance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "fullMark": {
+      "type": "integer"
+    },
+    "value": {
+      "type": "integer"
+    }
+  }
+}

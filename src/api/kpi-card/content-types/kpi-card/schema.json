@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kpi_cards",
+  "info": {
+    "singularName": "kpi-card",
+    "pluralName": "kpi-cards",
+    "displayName": "KpiCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "trend": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "analysis": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
