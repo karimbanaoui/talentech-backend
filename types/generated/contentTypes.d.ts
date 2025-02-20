@@ -369,6 +369,35 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBenefitsBenefits extends Struct.CollectionTypeSchema {
+  collectionName: 'benefits_data';
+  info: {
+    displayName: 'Benefits Data';
+    pluralName: 'benefits-data';
+    singularName: 'benefits';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefit: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::benefits.benefits'
+    > &
+      Schema.Attribute.Private;
+    percentage: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiConversionConversion extends Struct.CollectionTypeSchema {
   collectionName: 'conversion_cdi_data';
   info: {
@@ -433,6 +462,70 @@ export interface ApiDifficultesRecrutementDifficultesRecrutement
   };
 }
 
+export interface ApiDigitalTrendsDigitalTrends
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'digital_trends_data';
+  info: {
+    displayName: 'Digital Trends Data';
+    pluralName: 'digital-trends-data';
+    singularName: 'digital-trends';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    adoption: Schema.Attribute.Integer & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    importance: Schema.Attribute.Integer;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::digital-trends.digital-trends'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    trend: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDomainDomain extends Struct.CollectionTypeSchema {
+  collectionName: 'domains';
+  info: {
+    displayName: 'domains';
+    pluralName: 'domains';
+    singularName: 'domain';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.JSON;
+    demand: Schema.Attribute.Integer;
+    icon: Schema.Attribute.String;
+    jobs: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::domain.domain'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    tjm: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEvolutionEvolution extends Struct.CollectionTypeSchema {
   collectionName: 'evolutions';
   info: {
@@ -461,6 +554,35 @@ export interface ApiEvolutionEvolution extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     value: Schema.Attribute.Decimal & Schema.Attribute.Required;
     year: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
+  collectionName: 'experience_data';
+  info: {
+    displayName: 'Experience Data';
+    pluralName: 'experience-data';
+    singularName: 'experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    experience: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::experience.experience'
+    > &
+      Schema.Attribute.Private;
+    multiplier: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -563,6 +685,36 @@ export interface ApiKpiCardKpiCard extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
+  collectionName: 'location_data';
+  info: {
+    displayName: 'Location Data';
+    pluralName: 'location-data';
+    singularName: 'location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    avgSalary: Schema.Attribute.Integer & Schema.Attribute.Required;
+    city: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::location.location'
+    > &
+      Schema.Attribute.Private;
+    percentage: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPresentielPresentiel extends Struct.CollectionTypeSchema {
   collectionName: 'presentiel_data';
   info: {
@@ -624,6 +776,66 @@ export interface ApiRaisonsFreelanceRaisonsFreelance
   };
 }
 
+export interface ApiSalarySalary extends Struct.CollectionTypeSchema {
+  collectionName: 'salary_data';
+  info: {
+    displayName: 'Salary Data';
+    pluralName: 'salary-data';
+    singularName: 'salary';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::salary.salary'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+    salaryMax: Schema.Attribute.Integer;
+    salaryMedian: Schema.Attribute.Integer & Schema.Attribute.Required;
+    salaryMin: Schema.Attribute.Integer & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSkillsSkills extends Struct.CollectionTypeSchema {
+  collectionName: 'skills_data';
+  info: {
+    displayName: 'Skills Data';
+    pluralName: 'skills-data';
+    singularName: 'skills';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::skills.skills'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+    skills: Schema.Attribute.JSON & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiStrategiesOptimisationStrategiesOptimisation
   extends Struct.CollectionTypeSchema {
   collectionName: 'strategies_optimisations';
@@ -651,6 +863,37 @@ export interface ApiStrategiesOptimisationStrategiesOptimisation
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     value: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiTjmDomainTjmDomain extends Struct.CollectionTypeSchema {
+  collectionName: 'tjm_domains';
+  info: {
+    displayName: 'TjmDomain';
+    pluralName: 'tjm-domains';
+    singularName: 'tjm-domain';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    demand: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tjm-domain.tjm-domain'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    stats: Schema.Attribute.JSON & Schema.Attribute.Required;
+    technologies: Schema.Attribute.JSON & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1192,15 +1435,23 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::benefits.benefits': ApiBenefitsBenefits;
       'api::conversion.conversion': ApiConversionConversion;
       'api::difficultes-recrutement.difficultes-recrutement': ApiDifficultesRecrutementDifficultesRecrutement;
+      'api::digital-trends.digital-trends': ApiDigitalTrendsDigitalTrends;
+      'api::domain.domain': ApiDomainDomain;
       'api::evolution.evolution': ApiEvolutionEvolution;
+      'api::experience.experience': ApiExperienceExperience;
       'api::freelance.freelance': ApiFreelanceFreelance;
       'api::global.global': ApiGlobalGlobal;
       'api::kpi-card.kpi-card': ApiKpiCardKpiCard;
+      'api::location.location': ApiLocationLocation;
       'api::presentiel.presentiel': ApiPresentielPresentiel;
       'api::raisons-freelance.raisons-freelance': ApiRaisonsFreelanceRaisonsFreelance;
+      'api::salary.salary': ApiSalarySalary;
+      'api::skills.skills': ApiSkillsSkills;
       'api::strategies-optimisation.strategies-optimisation': ApiStrategiesOptimisationStrategiesOptimisation;
+      'api::tjm-domain.tjm-domain': ApiTjmDomainTjmDomain;
       'api::tjm.tjm': ApiTjmTjm;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_trends_data",
+  "info": {
+    "singularName": "digital-trends",
+    "pluralName": "digital-trends-data",
+    "displayName": "Digital Trends Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "trend": {
+      "type": "string",
+      "required": true
+    },
+    "adoption": {
+      "type": "integer",
+      "required": true
+    },
+    "importance": {
+      "type": "integer"
+    }
+  }
+}

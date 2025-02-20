@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "domains",
+  "info": {
+    "singularName": "domain",
+    "pluralName": "domains",
+    "displayName": "domains"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "tjm": {
+      "type": "integer"
+    },
+    "demand": {
+      "type": "integer"
+    },
+    "jobs": {
+      "type": "json"
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

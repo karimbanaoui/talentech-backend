@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "location_data",
+  "info": {
+    "singularName": "location",
+    "pluralName": "location-data",
+    "displayName": "Location Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    },
+    "avgSalary": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

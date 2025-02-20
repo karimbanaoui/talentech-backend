@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salary_data",
+  "info": {
+    "singularName": "salary",
+    "pluralName": "salary-data",
+    "displayName": "Salary Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "salaryMin": {
+      "type": "integer",
+      "required": true
+    },
+    "salaryMedian": {
+      "required": true,
+      "type": "integer"
+    },
+    "salaryMax": {
+      "type": "integer"
+    }
+  }
+}

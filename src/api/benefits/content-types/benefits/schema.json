@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefits_data",
+  "info": {
+    "singularName": "benefits",
+    "pluralName": "benefits-data",
+    "displayName": "Benefits Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "benefit": {
+      "type": "string",
+      "required": true
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

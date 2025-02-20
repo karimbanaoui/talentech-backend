@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tjm_domains",
+  "info": {
+    "singularName": "tjm-domain",
+    "pluralName": "tjm-domains",
+    "displayName": "TjmDomain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "technologies": {
+      "type": "json",
+      "required": true
+    },
+    "stats": {
+      "type": "json",
+      "required": true
+    },
+    "demand": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

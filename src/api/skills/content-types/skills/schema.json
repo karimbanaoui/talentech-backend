@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills_data",
+  "info": {
+    "singularName": "skills",
+    "pluralName": "skills-data",
+    "displayName": "Skills Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "skills": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

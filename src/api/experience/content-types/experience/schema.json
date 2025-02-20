@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experience_data",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experience-data",
+    "displayName": "Experience Data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "multiplier": {
+      "type": "decimal"
+    }
+  }
+}
