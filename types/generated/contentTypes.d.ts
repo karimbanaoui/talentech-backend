@@ -715,6 +715,74 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPasswordDrhPasswordDrh extends Struct.CollectionTypeSchema {
+  collectionName: 'access_password_drhs';
+  info: {
+    description: '';
+    displayName: 'AccessPasswordDRH';
+    pluralName: 'access-password-drhs';
+    singularName: 'password-drh';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::password-drh.password-drh'
+    > &
+      Schema.Attribute.Private;
+    password: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 5;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPasswordEsnPasswordEsn extends Struct.CollectionTypeSchema {
+  collectionName: 'access_password_esns';
+  info: {
+    description: '';
+    displayName: 'AccessPasswordESN';
+    pluralName: 'access-password-esns';
+    singularName: 'password-esn';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::password-esn.password-esn'
+    > &
+      Schema.Attribute.Private;
+    password: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 5;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPresentielPresentiel extends Struct.CollectionTypeSchema {
   collectionName: 'presentiel_data';
   info: {
@@ -1446,6 +1514,8 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::kpi-card.kpi-card': ApiKpiCardKpiCard;
       'api::location.location': ApiLocationLocation;
+      'api::password-drh.password-drh': ApiPasswordDrhPasswordDrh;
+      'api::password-esn.password-esn': ApiPasswordEsnPasswordEsn;
       'api::presentiel.presentiel': ApiPresentielPresentiel;
       'api::raisons-freelance.raisons-freelance': ApiRaisonsFreelanceRaisonsFreelance;
       'api::salary.salary': ApiSalarySalary;
